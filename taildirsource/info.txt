@@ -1,0 +1,15 @@
+flume-ng agent -n a1 -c $FLUME_HOME/conf -f $FLUME_HOME/conf/example/taildirsource.conf -Dflume.root.logger=INFO,console
+# 用telnet命令连接本机的44444端口，发送消息。
+echo 'hello' >> /tmp/flume-test/flume-test.log
+
+
+
+Taildir Source监控指定的一些文件，并在检测到新的一行数据产生的时候几乎实时地读取它们，如果新的一行数据还没写完，Taildir Source会等到这行写完后再读取。
+
+Taildir Source是可靠的，即使发生文件轮换（译者注1）也不会丢失数据。它会定期地以JSON格式在一个专门用于定位的文件上记录每个文件的最后读取位置。如果Flume由于某种原因停止或挂掉，它可以从文件的标记位置重新开始读取。
+
+Taildir Source还可以从任意指定的位置开始读取文件。默认情况下，它将从每个文件的第一行开始读取。
+
+文件按照修改时间的顺序来读取。修改时间最早的文件将最先被读取（简单记成：先来先走）。
+
+Taildir Source不重命名、删除或修改它监控的文件。当前不支持读取二进制文件。只能逐行读取文本文件。

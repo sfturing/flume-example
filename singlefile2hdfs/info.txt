@@ -1,0 +1,14 @@
+将Hadoop相关jar拷贝至Flume lib目录下
+#从hadoop/shared目录下拷贝
+hadoop-auth-2.8.5.jar
+hadoop-common-2.8.5.jar
+hadoop-hdfs-2.8.5.jar
+commons-io-2.4.jar
+commons-configuration-1.6.jar
+htrace-core4-4.0.1-incubating.jar
+woodstox-core-5.0.3.jar
+还有hadoop/shared/hdfs下的包
+# 启动Flume hadoop用户启动(有hdfs权限的用户都可以)
+flume-ng agent -n a1 -c $FLUME_HOME/conf -f $FLUME_HOME/conf/example/singlefile2hdfs.conf -Dflume.root.logger=INFO,console
+# 用telnet命令连接本机的44444端口，发送消息。
+echo 'hello' >> /tmp/flume-test/flume-test.log

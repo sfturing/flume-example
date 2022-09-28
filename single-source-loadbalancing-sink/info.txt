@@ -1,0 +1,12 @@
+# 负载均衡
+
+# 启动下游Flume
+flume-ng agent -n a2 -c $FLUME_HOME/conf -f $FLUME_HOME/conf/example/single-source-loadbalancing-sink.conf -Dflume.root.logger=INFO,console
+flume-ng agent -n a3 -c $FLUME_HOME/conf -f $FLUME_HOME/conf/example/single-source-loadbalancing-sink.conf -Dflume.root.logger=INFO,console
+
+# 启动上游Flume（最好调大一些jvm参数，防止GC影响）
+flume-ng  agent -Xmx200m -n a1 -c $FLUME_HOME/conf -f $FLUME_HOME/conf/example/single-source-loadbalancing-sink.conf -Dflume.root.logger=INFO,console
+# 发送消息。
+telnet sit3 9999
+
+发送消息观察是否轮询

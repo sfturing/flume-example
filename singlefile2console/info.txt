@@ -1,0 +1,4 @@
+# 启动Flume
+flume-ng agent -n a1 -c $FLUME_HOME/conf -f $FLUME_HOME/conf/example/singlefile2console.conf -Dflume.root.logger=INFO,console
+# 用telnet命令连接本机的44444端口，发送消息。
+echo 'hello' >> /tmp/flume-test/flume-test.log
