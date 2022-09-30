@@ -1,0 +1,4 @@
+# 启动Flume
+flume-ng agent -n a1 -c $FLUME_HOME/conf -f $FLUME_HOME/conf/example/custom-source.conf -Dflume.root.logger=INFO,console
+
+telnet sit3 9999

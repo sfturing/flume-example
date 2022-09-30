@@ -1,5 +1,6 @@
 package cn.sfturing.flume.custom.interceptor;
 
+import org.apache.flume.Context;
 import org.apache.flume.Event;
 import org.apache.flume.interceptor.Interceptor;
 
@@ -38,5 +39,22 @@ public class TypeInterceptor implements Interceptor {
     @Override
     public void close() {
 
+    }
+    public static class InterceptorBulder implements Builder {
+
+        @Override
+        public Interceptor build() {
+            return new TypeInterceptor();
+        }
+
+        /**
+         * 传递配置，可以将外部配置传递至内部
+         *
+         * @param context 配置上下文
+         */
+        @Override
+        public void configure(Context context) {
+
+        }
     }
 }

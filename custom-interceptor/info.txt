@@ -1,0 +1,5 @@
+# 启动Flume
+flume-ng agent -n a1 -c $FLUME_HOME/conf -f $FLUME_HOME/conf/example/interceptor.conf -Dflume.root.logger=INFO,console
+
+
+echo 'hello' >> /tmp/flume-test/flume-test.log

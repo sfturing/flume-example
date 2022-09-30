@@ -1,0 +1,2 @@
+# 启动Flume
+flume-ng agent -n a1 -c $FLUME_HOME/conf -f $FLUME_HOME/conf/example/custom-sink.conf -Dflume.root.logger=INFO,console
