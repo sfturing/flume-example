@@ -9,14 +9,9 @@
 6. [复制和多路复用](single-source-mutil-sink)
 7. [故障转移](single-source-failover-sink)
 8. [负载均衡](single-source-failover-sink)
-9. [自定义Interceptor](flume-custom\src\main\java\cn\sfturing\flume\custom\interceptor\TypeInterceptor.java)
-
-
-  [custom-interceptor](custom-interceptor)
-10. [自定义Source](flume-custom\src\main\java\cn\sfturing\flume\custom\source\TestSource.java)
-  [custom-source](custom-source)
-
-
-11. [自定义Sink](flume-custom\src\main\java\cn\sfturing\flume\custom\sink\CustomSink.java)
-
-    [custom-sink](custom-sink)
+9. [自定义Interceptor类](flume-custom\src\main\java\cn\sfturing\flume\custom\interceptor\TypeInterceptor.java)、
+  [custom-interceptor配置](custom-interceptor)
+10. [自定义Source类](flume-custom\src\main\java\cn\sfturing\flume\custom\source\TestSource.java)、
+  [custom-source配置](custom-source)
+11. [自定义Sink类](flume-custom\src\main\java\cn\sfturing\flume\custom\sink\CustomSink.java)、
+    [custom-sink配置](custom-sink)
