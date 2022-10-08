@@ -1,0 +1,4 @@
+cn\sfturing\flume\custom\source\TestSource.class
+cn\sfturing\flume\custom\interceptor\TypeInterceptor.class
+cn\sfturing\flume\custom\interceptor\TypeInterceptor$InterceptorBulder.class
+cn\sfturing\flume\custom\sink\CustomSink.class
